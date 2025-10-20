@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
       error: "Either the gameName or tagLine is missing",
       status: 400,
     });
-
+  
   try {
     const response = await axios.get(
       `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}?api_key=${process.env.RIOT_API_KEY}`
